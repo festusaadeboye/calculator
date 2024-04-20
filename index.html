@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.body {
+    background-color: rgb(90,88,87);
+    height: 350px;
+        width: 260px;
+        border-radius: 7px;
+        border: none;   
+}
+#display{
+    height: 50px;
+    width: 250px;
+    background-color: rgb(90,88,87);
+    border: none;   
+    padding-top: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.firstRow{
+    background-color:rgb(49,49,47);
+    color: white;
+    border: none;
+    height: 45px;
+    width: 55px;
+    padding-left: 10px;
+    margin-left: 2px;
+    cursor: pointer;
+    
+    }
+    .secondRow{
+        background-color:rgb(49,49,47);
+    color: white;
+    border: none;
+    height: 45px;
+    width: 55px;
+    padding-left: 10px;
+    margin-left: 2px;
+    margin-top: 5px;
+    cursor: pointer;
+    }
+    .thirdRow{
+    background-color:rgb(49,49,47);
+    color: white;
+    border: none;
+    height: 45px;
+    width: 55px;
+    padding-left: 10px;
+    margin-left: 2px;
+    margin-top: 5px; 
+    cursor: pointer; 
+    }
+    .fourthRow{
+    background-color:rgb(49,49,47);
+    color: white;
+    border: none;
+    height: 45px;
+    width: 55px;
+    padding-left: 10px;
+    margin-left: 2px;
+    margin-top: 5px;  
+    cursor: pointer;
+    }
+    .fifthRow{
+    background-color:rgb(49,49,47);
+    color: white;
+    border: none;
+    height: 45px;
+    width: 55px;
+    padding-left: 10px;
+    margin-left: 2px;
+    margin-top: 5px; 
+    cursor: pointer; 
+    }
+    .firstRow:hover{
+       background-color: rgb(242,153,27);
+    }
+    .secondRow:hover{
+       background-color: rgb(242,153,27);
+    }
+    .thirdRow:hover{
+       background-color: rgb(242,153,27);
+    }
+    .fourthRow:hover{
+       background-color: rgb(242,153,27);
+    }
+    .fifthRow:hover{
+       background-color: rgb(242,153,27);
+    }
+
+</style>
+
+
+<body>
+    <div class="body">
+        <input id="display" readonly>
+        <div class="first">
+            <button onclick="clearDisplay()"  class="firstRow">AC</button>
+            <button onclick="appendToDisplay('+/-')"  class="firstRow">+/-</button>
+            <button onclick="appendToDisplay('%')"  class="firstRow">%</button>
+            <button onclick="appendToDisplay('/')"  class="firstRow">/</button>
+        </div>
+        
+        <div id="second">
+            <button onclick="appendToDisplay('7')"  class="secondRow">7</button>
+            <button onclick="appendToDisplay('8')" class="secondRow">8</button>
+            <button onclick="appendToDisplay('9')" class="secondRow">9</button>
+            <button onclick="appendToDisplay('*')"  class="secondRow">*</button>
+        </div>
+
+        <div id="third">
+            <button onclick="appendToDisplay('4')" class="thirdRow">4</button>
+            <button onclick="appendToDisplay('5')"  class="thirdRow">5</button>
+            <button onclick="appendToDisplay('6')"  class="thirdRow">6</button>
+            <button onclick="appendToDisplay('-')"  class="thirdRow">-</button>
+        </div>
+        
+        <div id="fourth">
+            <button onclick="appendToDisplay('1')"  class="fourthRow">1</button>
+            <button onclick="appendToDisplay('2')"  class="fourthRow">2</button>
+            <button onclick="appendToDisplay('3')"  class="fourthRow">3</button>
+            <button onclick="appendToDisplay('+')" class="fourthRow">+</button>
+        </div>
+
+        <div id="fifth">
+            <button onclick="appendToDisplay('0')"  class="fifthRow">0</button>
+            <button onclick="appendToDisplay('.')"  class="fifthRow">.</button>
+            <button onclick="calculate('=')"  class="fifthRow">=</button>
+            
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+const display = document.getElementById('display');
+
+function appendToDisplay(input){
+    display.value += input;
+}
+
+
+function clearDisplay(){
+display.value = '0'
+}
+
+function calculate(){
+display.value = eval(display.value)
+}
+</script>
+</html>
